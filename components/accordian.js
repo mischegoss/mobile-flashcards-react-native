@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Content, Accordion } from "native-base";
+import { Container, Content, Accordion, Badge, Text } from "native-base";
 
 const dataArray = [
   { title: "First Element", content: "Lorem ipsum dolor sit amet" },
@@ -12,8 +12,15 @@ export default class AccordionMain extends Component {
     return (
       
        
-        
-          <Accordion dataArray={dataArray} expanded={0}/>
+      <Accordion
+      dataArray={dataArray}
+      icon="add"
+      expandedIcon="remove"
+      iconStyle={{ color: "green" }}
+      expandedIconStyle={{ color: "red" }}
+    />
+
+          
       
         
       
