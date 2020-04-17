@@ -1,21 +1,49 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Separator,  Badge, Button, ListItem, Text, Left, Body, Right, Switch } from 'native-base';
 export default class AccordianMain extends Component {
+
+  
   render() {
+
+    const startingDeck = 
+    {
+    deckId:'Deck32355',
+    deckTitle: 'React',
+    cards: [
+            {
+                question: 'Did Facebook create React?',
+                answer: true
+            },
+            {
+                question: 'Does React Only Work On Web?',
+                answer: false
+            },
+            {
+                question: 'Does React use JSX?',
+                answer: true
+            }
+        ]
+    }
+
+
     return (
-      <Container>
-        <Header />
+     
+       
+        <Container>
         <Content>
+      
           
-          
+        {Object.keys(startingDeck).map(deck => {
+          return(  
+            
           <ListItem icon selected>
             <Left>
             <Badge primary>
-            <Text>2</Text>
+            <Text>{2}</Text>
           </Badge>
             </Left>
             <Body>
-              <Text>LIST ITEM 1 </Text>
+              <Text>{deck.deckTitle} </Text>
             </Body>
             <Right>
             <Button rounded dark>
@@ -23,28 +51,13 @@ export default class AccordianMain extends Component {
           </Button>
             </Right>
           </ListItem>
-          <Separator bordered>
-           
-          </Separator>
-
-          <ListItem icon selected>
-            <Left>
-            <Badge primary>
-            <Text>2</Text>
-          </Badge>
-            </Left>
-            <Body>
-              <Text>LIST ITEM 1 </Text>
-            </Body>
-            <Right>
-            <Button full dark>
-            <Text>PLAY</Text>
-          </Button>
-            </Right>
-          </ListItem>
+         
           
-        </Content>
-      </Container>
+          )})}
+          </Content>
+          </Container>
+        
+     
     );
   }
 }
