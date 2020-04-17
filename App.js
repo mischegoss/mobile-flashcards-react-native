@@ -3,8 +3,10 @@ import { AppLoading } from 'expo';
 import { Container, Text, Content } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
-import AccordianMain from './components/accordian'
+
 import MyTabs from './components/tabs'
+
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -30,11 +32,7 @@ export default class App extends React.Component {
 
     return (
       <Container>
-        <MyTabs/>
-        <AccordianMain/>
-        
-       
-      
+        <MyTabs/>      
       </Container>
     );
   }
